@@ -20,6 +20,11 @@ struct ContentView: View {
                 Image(systemName: "star.fill")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
+                
+                Image("cars")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
             }
             .padding()
                 

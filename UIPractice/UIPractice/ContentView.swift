@@ -11,6 +11,20 @@ struct ContentView: View {
     @State private var counter = 0
     var body: some View {
         VStack {
+            
+            HStack{
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                
+                Image(systemName: "star.fill")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+            }
+            .padding()
+                
+                
+            
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)

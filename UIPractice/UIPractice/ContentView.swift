@@ -27,6 +27,16 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
+            
+            Button(action:{
+                counter -= 1
+            }){
+                Text("Decrement Counter")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
         .padding()
     }

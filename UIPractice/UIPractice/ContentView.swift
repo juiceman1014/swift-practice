@@ -8,37 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    let images = ["car", "car2", "car3"]
     
     var body: some View {
-        ScrollView{
-            VStack {
-                Image("car")
+        TabView{
+            ForEach(images, id: \.self){ image in
+                Image(image)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
-                Image("car2")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                Image("car3")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                Image("car")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                Image("car2")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                Image("car3")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .padding()
             }
-            .padding()
         }
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 
